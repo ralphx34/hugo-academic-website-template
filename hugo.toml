@@ -1,0 +1,49 @@
+baseURL = "https://example.com/"
+locale = "en-US"
+title = "Your Name"
+
+[params]
+  description = "Academic personal website"
+  name = "Your Name"
+  position = "Your Position"
+  institution = "Your Institution"
+  email = "your.email@example.com"
+  profileImage = "images/profile-placeholder.jpeg"
+  cvFile = "files/placeholder-cv.pdf"
+  office = "your office"
+  address = "your address"
+  phone = "your phone number"
+  themeStyle = "modern"
+
+[menus]
+  [[menus.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+
+  [[menus.main]]
+    name = "Research"
+    pageRef = "/research"
+    weight = 20
+
+  [[menus.main]]
+    name = "Teaching"
+    pageRef = "/teaching"
+    weight = 30
+
+  [[menus.main]]
+    name = "CV"
+    pageRef = "/cv"
+    weight = 40
+
+  [[menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 50
+
+[params.links]
+  googleScholar = "https://scholar.google.com/citations?user=K7yJI7IAAAAJ&hl=en"
+  github = ""
+  orcid = ""
+  linkedin = ""
+  institutionalProfile = ""

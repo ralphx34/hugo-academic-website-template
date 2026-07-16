@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<section class="home-intro">
+    {{ with .Site.Params.profileImage }}
+        <img
+            class="profile-image"
+            src="{{ . | relURL }}"
+            alt="Photograph of {{ $.Site.Params.name }}"
+        >
+    {{ end }}
+
+    <div class="home-intro-text">
+        <h1>{{ .Site.Params.name }}</h1>
+
+        <p class="home-position">
+            {{ .Site.Params.position }}
+        </p>
+
+        <p class="home-institution">
+            {{ .Site.Params.institution }}
+        </p>
+        {{ partial "profile-links.html" . }}
+    </div>
+</section>
+
+<section class="home-content">
+    {{ .Content }}
+</section>
+
+{{ end }}

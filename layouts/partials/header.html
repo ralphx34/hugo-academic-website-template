@@ -1,0 +1,21 @@
+<header class="site-header">
+    <a class="site-title" href="{{ "/" | relURL }}">
+        {{ .Site.Params.name }}
+    </a>
+
+    {{ $currentPage := . }}
+
+    <nav class="site-navigation" aria-label="Main navigation">
+        {{ range .Site.Menus.main }}
+            <a
+                href="{{ .URL | relURL }}"
+                {{ if $currentPage.IsMenuCurrent "main" . }}
+                    class="active"
+                    aria-current="page"
+                {{ end }}
+            >
+                {{ .Name }}
+            </a>
+        {{ end }}
+    </nav>
+</header>

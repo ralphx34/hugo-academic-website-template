@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ with .Content }}
+    <div class="contact-introduction">
+        {{ . }}
+    </div>
+{{ end }}
+
+<dl class="contact-details">
+    {{ with .Site.Params.email }}
+        <div class="contact-item">
+            <dt>Email</dt>
+            <dd><a href="mailto:{{ . }}">{{ . }}</a></dd>
+        </div>
+    {{ end }}
+
+    {{ with .Site.Params.office }}
+        <div class="contact-item">
+            <dt>Office</dt>
+            <dd>{{ . }}</dd>
+        </div>
+    {{ end }}
+
+    {{ with .Site.Params.address }}
+        <div class="contact-item">
+            <dt>Address</dt>
+            <dd>{{ . }}</dd>
+        </div>
+    {{ end }}
+
+    {{ with .Site.Params.phone }}
+        <div class="contact-item">
+            <dt>Phone</dt>
+            <dd>{{ . }}</dd>
+        </div>
+    {{ end }}
+</dl>
+
+{{ end }}

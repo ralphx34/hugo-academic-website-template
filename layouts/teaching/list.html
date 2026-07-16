@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ with .Content }}
+    <div class="teaching-introduction">
+        {{ . }}
+    </div>
+{{ end }}
+
+<section class="teaching-list">
+    {{ range .Pages.ByWeight }}
+        {{ partial "teaching-entry.html" . }}
+    {{ end }}
+</section>
+
+{{ end }}

@@ -1,0 +1,146 @@
+html {
+    background-color: #eef1f7;
+}
+
+body {
+    color: #20212b;
+    background-color: #f8f9fc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #5424a7, #8f45d6);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(84, 36, 167, 0.22);
+}
+
+.site-title,
+.site-title:visited {
+    color: #ffffff;
+}
+
+.site-navigation a,
+.site-navigation a:visited {
+    color: #eee4ff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-navigation a.active,
+.site-navigation a.active:visited {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+}
+
+.site-footer {
+    color: #6c6875;
+    border-top: 1px solid #d8d5df;
+}
+
+.home-intro {
+    padding: 2rem;
+    background: linear-gradient(145deg, #ffffff, #f2eaff);
+    border: 1px solid #dfccfa;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(84, 36, 167, 0.1);
+}
+
+.profile-image {
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(84, 36, 167, 0.25);
+}
+
+.home-intro h1,
+h1,
+h2,
+h3 {
+    color: #2f174f;
+}
+
+.home-institution,
+.research-year,
+.teaching-level,
+.cv-unavailable {
+    color: #6c6875;
+}
+
+.profile-links a,
+.profile-links a:visited {
+    padding: 0.35rem 0.75rem;
+    color: #5424a7;
+    background-color: #eee4ff;
+    border-radius: 999px;
+}
+
+.profile-links a:hover,
+.profile-links a:focus {
+    color: #ffffff;
+    background-color: #5424a7;
+}
+
+.research-section h2 {
+    padding: 0.75rem 1rem;
+    background-color: #5424a7;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+.research-entry,
+.teaching-entry {
+    margin-bottom: 1rem;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border: 1px solid #ded9e7;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(35, 24, 58, 0.07);
+}
+
+.research-links a,
+.research-links a:visited,
+.teaching-links a,
+.teaching-links a:visited,
+.contact-item a,
+.contact-item a:visited,
+.error-page a,
+.error-page a:visited {
+    color: #5424a7;
+}
+
+.research-links a:hover,
+.research-links a:focus,
+.teaching-links a:hover,
+.teaching-links a:focus,
+.contact-item a:hover,
+.contact-item a:focus,
+.error-page a:hover,
+.error-page a:focus {
+    text-decoration: underline;
+}
+
+.cv-button {
+    color: #ffffff;
+    background: linear-gradient(135deg, #5424a7, #8f45d6);
+    border-radius: 8px;
+    box-shadow: 0 5px 14px rgba(84, 36, 167, 0.25);
+}
+
+.cv-button:hover,
+.cv-button:focus {
+    background: linear-gradient(135deg, #401886, #7434b5);
+}
+
+.contact-item {
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ded9e7;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(35, 24, 58, 0.05);
+}

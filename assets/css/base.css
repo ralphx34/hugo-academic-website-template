@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.site-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.site-title {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+}
+
+.site-navigation a {
+    margin-right: 0;
+    text-decoration: none;
+}
+
+main {
+    min-height: 60vh;
+}
+
+.site-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.home-intro {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.home-intro h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.5rem;
+}
+
+.home-position {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.home-institution {
+    margin: 0.25rem 0 0;
+    font-size: 1.1rem;
+}
+
+.home-content h2 {
+    margin-top: 2rem;
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.profile-links a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.research-introduction,
+.teaching-introduction {
+    margin-bottom: 2.5rem;
+}
+
+.research-section {
+    margin-top: 2.5rem;
+}
+
+.research-section h2 {
+    padding-bottom: 0.5rem;
+}
+
+.research-entry,
+.teaching-entry {
+    padding: 1.5rem 0;
+}
+
+.research-entry h3,
+.teaching-entry h2 {
+    margin: 0 0 0.4rem;
+}
+
+.teaching-entry h2 {
+    font-size: 1.4rem;
+}
+
+.research-authors,
+.research-year,
+.research-description,
+.teaching-details,
+.teaching-level {
+    margin: 0.35rem 0;
+}
+
+.research-authors {
+    font-weight: bold;
+}
+
+.research-links,
+.teaching-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.research-links a,
+.teaching-links a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.teaching-description {
+    margin-top: 0.75rem;
+}
+
+.teaching-description p {
+    margin: 0;
+}
+
+.cv-introduction,
+.contact-introduction {
+    margin-bottom: 2rem;
+}
+
+.cv-actions {
+    margin-top: 1.5rem;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-details {
+    margin: 0;
+}
+
+.contact-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    padding: 0.75rem 0;
+}
+
+.contact-item dt {
+    font-weight: bold;
+}
+
+.contact-item dd {
+    margin: 0;
+}
+
+.contact-item a {
+    text-decoration: none;
+}
+
+.error-page {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.error-page h1 {
+    margin-bottom: 1rem;
+}
+
+.error-page a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1.25rem;
+    }
+
+    .site-title {
+        font-size: 1.75rem;
+    }
+
+    .site-navigation {
+        gap: 0.5rem 1rem;
+    }
+
+    .home-intro {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin: 0 auto;
+    }
+
+    .profile-links {
+        justify-content: center;
+    }
+
+    .contact-item {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+}

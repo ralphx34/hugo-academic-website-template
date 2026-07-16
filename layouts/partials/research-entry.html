@@ -1,0 +1,35 @@
+<article class="research-entry">
+    <h3>{{ .Title }}</h3>
+
+    {{ with .Params.authors }}
+        <p class="research-authors">
+            {{ delimit . ", " }}
+        </p>
+    {{ end }}
+
+    {{ with .Params.year }}
+        <p class="research-year">{{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.description }}
+        <p class="research-description">{{ . }}</p>
+    {{ end }}
+
+    <div class="research-links">
+        {{ with .Params.paper }}
+            <a href="{{ . | relURL }}">Paper</a>
+        {{ end }}
+
+        {{ with .Params.publication }}
+            <a href="{{ . | relURL }}">Published article</a>
+        {{ end }}
+
+        {{ with .Params.code }}
+            <a href="{{ . | relURL }}">Code</a>
+        {{ end }}
+
+        {{ with .Params.data }}
+            <a href="{{ . | relURL }}">Data</a>
+        {{ end }}
+    </div>
+</article>

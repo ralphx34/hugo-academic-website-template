@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ with .Content }}
+    <div class="cv-introduction">
+        {{ . }}
+    </div>
+{{ end }}
+
+{{ with .Site.Params.cvFile }}
+    <p class="cv-actions">
+        <a class="cv-button" href="{{ . | relURL }}" target="_blank">
+            Download CV
+        </a>
+    </p>
+{{ else }}
+    <p class="cv-unavailable">
+        The CV file has not yet been added.
+    </p>
+{{ end }}
+
+{{ end }}

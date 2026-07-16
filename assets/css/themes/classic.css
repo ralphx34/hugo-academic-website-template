@@ -1,0 +1,122 @@
+html {
+    background-color: #f3efe6;
+}
+
+body {
+    color: #252525;
+    background-color: #fffdf8;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-header {
+    padding-top: 1.25rem;
+    border-top: 6px solid #17365d;
+    border-bottom: 2px solid #17365d;
+}
+
+.site-title,
+.site-title:visited {
+    color: #17365d;
+}
+
+.site-navigation a,
+.site-navigation a:visited,
+.profile-links a,
+.profile-links a:visited,
+.research-links a,
+.research-links a:visited,
+.teaching-links a,
+.teaching-links a:visited,
+.contact-item a,
+.contact-item a:visited,
+.error-page a,
+.error-page a:visited {
+    color: #7a1f2b;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.profile-links a:hover,
+.profile-links a:focus,
+.research-links a:hover,
+.research-links a:focus,
+.teaching-links a:hover,
+.teaching-links a:focus,
+.contact-item a:hover,
+.contact-item a:focus,
+.error-page a:hover,
+.error-page a:focus {
+    text-decoration: underline;
+}
+
+.site-navigation a.active,
+.site-navigation a.active:visited {
+    color: #17365d;
+    font-weight: bold;
+    border-bottom: 2px solid #17365d;
+}
+
+.site-footer {
+    color: #666158;
+    border-top: 1px solid #b7ad9c;
+}
+
+.home-intro {
+    padding: 1.5rem;
+    background-color: #f7f2e8;
+    border-left: 5px solid #17365d;
+}
+
+.profile-image {
+    height: 220px;
+    border: 1px solid #9f9585;
+    border-radius: 2px;
+}
+
+.home-intro h1,
+h1,
+h2,
+h3 {
+    color: #17365d;
+}
+
+.home-institution,
+.research-year,
+.teaching-level,
+.cv-unavailable {
+    color: #666158;
+}
+
+.research-section h2 {
+    border-bottom: 2px solid #17365d;
+}
+
+.research-entry,
+.teaching-entry {
+    border-bottom: 1px solid #cfc6b8;
+}
+
+.research-entry:last-child,
+.teaching-entry:last-child {
+    border-bottom: none;
+}
+
+.cv-button {
+    color: #ffffff;
+    background-color: #17365d;
+    border: 1px solid #17365d;
+    border-radius: 2px;
+}
+
+.cv-button:hover,
+.cv-button:focus {
+    background-color: #0d2746;
+}
+
+.contact-item {
+    border-bottom: 1px solid #cfc6b8;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}

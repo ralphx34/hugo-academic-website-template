@@ -1,0 +1,33 @@
+{{ with .Site.Params.links }}
+    <div class="profile-links">
+        {{ with .googleScholar }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                Google Scholar
+            </a>
+        {{ end }}
+
+        {{ with .github }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+        {{ end }}
+
+        {{ with .orcid }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                ORCID
+            </a>
+        {{ end }}
+
+        {{ with .linkedin }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+        {{ end }}
+
+        {{ with .institutionalProfile }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                Institutional Profile
+            </a>
+        {{ end }}
+    </div>
+{{ end }}

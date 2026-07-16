@@ -1,0 +1,14 @@
+# Hugo-generated website
+/public/
+/resources/_gen/
+
+# Hugo temporary files
+.hugo_build.lock
+hugo_stats.json
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/

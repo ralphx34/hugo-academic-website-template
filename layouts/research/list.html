@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ with .Content }}
+    <div class="research-introduction">
+        {{ . }}
+    </div>
+{{ end }}
+
+{{ $workingPapers := where .Pages "Params.category" "working-paper" }}
+{{ $publications := where .Pages "Params.category" "publication" }}
+{{ $workInProgress := where .Pages "Params.category" "work-in-progress" }}
+
+{{ if $workingPapers }}
+<section class="research-section">
+    <h2>Working Papers</h2>
+
+    {{ range $workingPapers.ByWeight }}
+        {{ partial "research-entry.html" . }}
+    {{ end }}
+</section>
+{{ end }}
+
+{{ if $publications }}
+<section class="research-section">
+    <h2>Publications</h2>
+
+    {{ range $publications.ByWeight }}
+        {{ partial "research-entry.html" . }}
+    {{ end }}
+</section>
+{{ end }}
+
+{{ if $workInProgress }}
+<section class="research-section">
+    <h2>Work in Progress</h2>
+
+    {{ range $workInProgress.ByWeight }}
+        {{ partial "research-entry.html" . }}
+    {{ end }}
+</section>
+{{ end }}
+
+{{ end }}

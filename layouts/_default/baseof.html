@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {{ if .IsHome }}
+            {{ .Site.Title }}
+        {{ else }}
+            {{ .Title }} | {{ .Site.Title }}
+        {{ end }}
+    </title>
+
+    {{ $description := .Description | default .Site.Params.description }}
+
+    <meta name="description" content="{{ $description }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+    <meta property="og:description" content="{{ $description }}">
+    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{ $baseStyle := resources.Get "css/base.css" | minify | fingerprint }}
+    {{ $themeName := .Site.Params.themeStyle | default "classic" }}
+    {{ $themePath := printf "css/themes/%s.css" $themeName }}
+    {{ $selectedTheme := resources.Get $themePath | minify | fingerprint }}
+
+    <link
+        rel="stylesheet"
+        href="{{ $baseStyle.RelPermalink }}"
+        integrity="{{ $baseStyle.Data.Integrity }}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ $selectedTheme.RelPermalink }}"
+        integrity="{{ $selectedTheme.Data.Integrity }}"
+    >
+</head>
+
+<body class="theme-{{ .Site.Params.themeStyle | default "classic" }}">
+
+    {{ partial "header.html" . }}
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+</body>
+</html>

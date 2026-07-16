@@ -1,0 +1,160 @@
+html,
+body {
+    background-color: #ffffff;
+}
+
+body {
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2rem;
+    border-bottom: 1px solid #111111;
+}
+
+.site-title,
+.site-title:visited {
+    color: #111111;
+    font-size: 1.5rem;
+}
+
+.site-navigation {
+    justify-content: flex-end;
+}
+
+.site-navigation a,
+.site-navigation a:visited {
+    color: #555555;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: #000000;
+}
+
+.site-navigation a.active,
+.site-navigation a.active:visited {
+    color: #000000;
+    font-weight: bold;
+}
+
+.site-footer {
+    color: #666666;
+    border-top: 1px solid #dddddd;
+}
+
+.home-intro {
+    gap: 2.5rem;
+}
+
+.profile-image {
+    height: auto;
+    border-radius: 0;
+    filter: grayscale(100%);
+}
+
+.home-intro h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+}
+
+.home-position {
+    font-weight: normal;
+}
+
+.home-institution,
+.research-year,
+.teaching-level,
+.cv-unavailable {
+    color: #666666;
+}
+
+.profile-links a,
+.profile-links a:visited,
+.research-links a,
+.research-links a:visited,
+.teaching-links a,
+.teaching-links a:visited,
+.contact-item a,
+.contact-item a:visited,
+.error-page a,
+.error-page a:visited {
+    color: #111111;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.profile-links a:hover,
+.profile-links a:focus,
+.research-links a:hover,
+.research-links a:focus,
+.teaching-links a:hover,
+.teaching-links a:focus,
+.contact-item a:hover,
+.contact-item a:focus,
+.error-page a:hover,
+.error-page a:focus {
+    color: #666666;
+}
+
+.research-section h2 {
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #111111;
+}
+
+.research-entry,
+.teaching-entry {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.research-entry:last-child,
+.teaching-entry:last-child {
+    border-bottom: none;
+}
+
+.research-entry h3,
+.teaching-entry h2 {
+    font-weight: 600;
+}
+
+.cv-button {
+    color: #111111;
+    background-color: #ffffff;
+    border: 1px solid #111111;
+    border-radius: 0;
+}
+
+.cv-button:hover,
+.cv-button:focus {
+    color: #ffffff;
+    background-color: #111111;
+}
+
+.contact-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        display: block;
+    }
+
+    .site-navigation {
+        justify-content: flex-start;
+    }
+
+    .home-intro h1 {
+        font-size: 2.25rem;
+    }
+}

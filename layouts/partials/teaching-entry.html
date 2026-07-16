@@ -1,0 +1,43 @@
+<article class="teaching-entry">
+    <h2>{{ .Title }}</h2>
+
+    <p class="teaching-details">
+        {{ with .Params.role }}<strong>{{ . }}</strong>{{ end }}
+
+        {{ with .Params.institution }}
+            <span> · {{ . }}</span>
+        {{ end }}
+
+        {{ with .Params.term }}
+            <span> · {{ . }}</span>
+        {{ end }}
+
+        {{ with .Params.year }}
+            <span> {{ . }}</span>
+        {{ end }}
+    </p>
+
+    {{ with .Params.level }}
+        <p class="teaching-level">{{ . }}</p>
+    {{ end }}
+
+    {{ with .Content }}
+        <div class="teaching-description">
+            {{ . }}
+        </div>
+    {{ end }}
+
+    <div class="teaching-links">
+        {{ with .Params.coursePage }}
+            <a href="{{ . | relURL }}">Course page</a>
+        {{ end }}
+
+        {{ with .Params.syllabus }}
+            <a href="{{ . | relURL }}">Syllabus</a>
+        {{ end }}
+
+        {{ with .Params.materials }}
+            <a href="{{ . | relURL }}">Course materials</a>
+        {{ end }}
+    </div>
+</article>
