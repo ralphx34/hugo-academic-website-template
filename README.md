@@ -461,6 +461,117 @@ public/
 
 Do not edit files inside `public/`. They are regenerated whenever Hugo builds the website.
 
+## Deploy with GitHub Pages
+
+This repository includes:
+
+```text
+.github/workflows/hugo.yaml
+```
+
+The workflow builds the Hugo website and deploys the generated `public/` folder through GitHub Pages whenever a change is pushed to the `main` branch.
+
+### 1. Create a GitHub Repository
+
+Create a new public GitHub repository.
+
+Do not initialize it with a README, `.gitignore`, or license because the local project already contains those files.
+
+### 2. Connect the Local Project
+
+From the project folder, run:
+
+```bash
+git init
+git add .
+git commit -m "Create personal website"
+git branch -M main
+git remote add origin REPOSITORY-URL
+git push -u origin main
+```
+
+Replace `REPOSITORY-URL` with the repository’s HTTPS or SSH URL.
+
+### 3. Enable GitHub Pages
+
+On GitHub:
+
+1. Open the repository.
+2. Select **Settings**.
+3. Select **Pages** in the sidebar.
+4. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+
+There is no separate Save button.
+
+### 4. Monitor Deployment
+
+After pushing the repository:
+
+1. Open the **Actions** tab.
+2. Select **Build and deploy Hugo site**.
+3. Wait for the `build` and `deploy` jobs to finish.
+
+Both jobs should display green check marks.
+
+The live address for a project repository normally follows this format:
+
+```text
+https://USERNAME.github.io/REPOSITORY-NAME/
+```
+
+For example:
+
+```text
+https://example-user.github.io/personal-website/
+```
+
+### 5. Publish Updates
+
+After editing the website, commit and push the changes:
+
+```bash
+git add .
+git commit -m "Update website"
+git push
+```
+
+GitHub Actions will rebuild and redeploy the website automatically.
+
+### GitHub Pages Base URL
+
+The deployment workflow automatically supplies the correct GitHub Pages base URL during the production build:
+
+```yaml
+--baseURL "${{ steps.pages.outputs.base_url }}/"
+```
+
+Therefore, a GitHub Pages deployment does not require manually changing `baseURL` before every build.
+
+The placeholder in `hugo.toml` may remain:
+
+```toml
+baseURL = "https://example.com/"
+```
+
+When using another hosting provider or a custom domain, replace it with the site’s permanent public address.
+
+### Troubleshooting
+
+If deployment fails:
+
+1. Open the repository’s **Actions** tab.
+2. Open the failed workflow.
+3. Select the failed job.
+4. Expand the failed step and read its error message.
+
+Confirm that:
+
+- GitHub Pages uses **GitHub Actions** as its source.
+- The default branch is named `main`.
+- `.github/workflows/hugo.yaml` exists.
+- The selected `themeStyle` has a matching file in `assets/css/themes/`.
+- The website builds locally with `hugo`.
+
 ## Project Structure
 
 ```text
