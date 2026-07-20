@@ -12,6 +12,64 @@ Confirm that Hugo is available. Open an terminal and run:
 hugo version
 ```
 
+## Create Your Website from the Template
+
+Before editing the website, download your own copy of the template.
+
+### 1. Download the Template
+
+Open the template repository on GitHub:
+
+```text
+https://github.com/ralphx34/hugo-academic-website-template
+```
+
+Select the green **Code** button near the top of the repository.
+
+Select:
+
+```text
+Download ZIP
+```
+
+The downloaded file will normally be named:
+
+```text
+hugo-academic-website-template-main.zip
+```
+
+Downloading the ZIP creates a separate copy of the template. Changes made to the downloaded copy will not affect the original template repository.
+
+### 2. Extract and Rename the Folder
+
+Open the folder where the ZIP file was downloaded.
+
+On Windows:
+
+1. Right-click `hugo-academic-website-template-main.zip`.
+2. Select **Extract All**.
+3. Choose where the extracted folder should be stored.
+4. Select **Extract**.
+
+The extracted folder will normally be named:
+
+```text
+hugo-academic-website-template-main
+```
+
+Rename this folder to the name you want to use for your website project.
+
+For example:
+
+```text
+jane-doe-academic-website
+```
+
+The renamed folder is now your independent website project. All website files should be edited inside this folder.
+
+Do not edit the original ZIP file. Keep it as a clean backup or delete it after confirming that the extracted folder works.
+
+
 ## Run the Website Locally
 
 Open a terminal in the project folder and run:
