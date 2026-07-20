@@ -6,7 +6,7 @@ A reusable Hugo template for an academic personal website with Home, Research, T
 
 Install Hugo before using the template.
 
-Confirm that Hugo is available:
+Confirm that Hugo is available. Open an terminal and run:
 
 ```bash
 hugo version
@@ -64,6 +64,8 @@ Then set this value in `hugo.toml`:
 profileImage = "images/profile.jpg"
 ```
 
+You may delete the placeholder image after replacing it with your desired profile image.
+
 ## Curriculum Vitae
 
 Place the PDF in:
@@ -83,6 +85,8 @@ Then set this value in `hugo.toml`:
 ```toml
 cvFile = "files/cv.pdf"
 ```
+
+You may delete the placeholder CV after replacing it with your own CV.
 
 ## Homepage Content
 
