@@ -254,6 +254,85 @@ Each file inside `assets/css/themes/` defines a complete visual design. Theme fi
 
 The selected theme loads after `base.css`, so it can override any shared rule when necessary.
 
+## Import an Existing Visual Theme
+
+If you already have a visual theme that was created for this template, you can reuse it without rebuilding the design from scratch.
+
+A reusable visual theme is a `.css` file from the following folder in another website made with this template:
+
+```text
+assets/css/themes/
+```
+
+### 1. Copy the Existing Theme File
+
+Find the theme file you want to reuse.
+
+For example:
+
+```text
+emerald.css
+```
+
+Copy that file into the new website's theme folder:
+
+```text
+assets/css/themes/
+```
+
+The resulting location should be:
+
+```text
+assets/css/themes/emerald.css
+```
+
+### 2. Select the Imported Theme
+
+Open:
+
+```text
+hugo.toml
+```
+
+Find the `themeStyle` setting inside `[params]`:
+
+```toml
+themeStyle = "modern"
+```
+
+Replace its value with the imported theme's filename without the `.css` extension:
+
+```toml
+themeStyle = "emerald"
+```
+
+The filename and configuration value must match exactly:
+
+```text
+emerald.css
+themeStyle = "emerald"
+```
+
+### 3. Preview the Imported Theme
+
+Run:
+
+```bash
+hugo server
+```
+
+Open the displayed local address, normally:
+
+```text
+http://localhost:1313/
+```
+
+The website should now use the imported theme.
+
+A visual theme created for this template can be reused in any other website made from the template by copying its `.css` file into `assets/css/themes/` and selecting it in `hugo.toml`.
+
+This process applies to visual themes created for this template. A complete Hugo theme downloaded from another source may use different layouts, configuration settings, and content structures and cannot necessarily be imported as a single CSS file.
+
 ## Create a Custom Theme
 
 To create another theme, copy one of the existing theme files:
