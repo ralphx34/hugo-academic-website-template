@@ -1,13 +1,13 @@
 +++
 title = "{{ replace .File.ContentBaseName "-" " " | title }}"
-authors = []
-category = "working-paper"
+institution = ""
+role = "Instructor"
+term = ""
 year = {{ now.Year }}
-description = ""
-paper = ""
-publication = ""
-code = ""
-data = ""
+level = "Undergraduate"
+coursePage = ""
+syllabus = ""
+materials = ""
 weight = 10
 draft = true
 
@@ -15,3 +15,5 @@ draft = true
   render = "never"
   list = "local"
 +++
+
+Add an optional short description of the course or teaching responsibilities here.
