@@ -4,7 +4,7 @@ A reusable Hugo template for an academic personal website with Home, Research, T
 
 ## Requirements
 
-Install Hugo before using the template.
+Install Hugo before using the template: https://gohugo.io/getting-started/quick-start/
 
 Confirm that Hugo is available. Open an terminal and run:
 
